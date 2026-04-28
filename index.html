@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uras Aydın | Portfolyo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-     
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-           
+            font-family: 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             background-attachment: fixed;
             color: white;
@@ -27,6 +26,9 @@
             border-radius: 50px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
         }
 
         .nav-btn {
@@ -40,72 +42,62 @@
             border-radius: 20px;
         }
 
-        .nav-btn:hover {
-            background: #007bff;
-            color: white;
-        }
+        .nav-btn:hover { background: #00d2ff; color: #121212; }
 
-     
+        
         .section {
             display: none;
             text-align: center;
-            padding: 50px;
-            background: rgba(0, 0, 0, 0.6); 
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 25px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             width: 85%;
             max-width: 700px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             animation: slideUp 0.6s ease;
+            margin-bottom: 50px;
         }
 
-        .active {
-            display: block;
-        }
+        .active { display: block; }
 
         h1 { font-size: 2.8rem; margin-bottom: 10px; color: #00d2ff; }
-        h2 { border-bottom: 2px solid #00d2ff; display: inline-block; padding-bottom: 5px; }
-        p { line-height: 1.8; color: #ddd; font-size: 1.1rem; }
+        h2 { border-bottom: 2px solid #00d2ff; padding-bottom: 5px; margin-bottom: 20px; }
 
       
-        .skills-list {
-            list-style: none;
-            padding: 0;
+        .info-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+            border-left: 4px solid #00d2ff;
+        }
+
+      
+        .social-links {
+            margin-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            gap: 20px;
         }
 
-        .skill-item {
-            background: #00d2ff;
-            color: #121212;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-       
-        .mail-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: #3a7bd5;
+        .social-links a {
             color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
+            font-size: 1.8rem;
             transition: 0.3s;
         }
 
-        .mail-btn:hover {
-            background: #00d2ff;
-            transform: scale(1.05);
+        .social-links a:hover { color: #00d2ff; transform: translateY(-5px); }
+
+        
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
         }
 
-       
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -122,29 +114,44 @@
 
     <div id="anasayfa" class="section active">
         <h1>Uras Aydın</h1>
-        <p>Bilişim Teknolojileri Bölümü Öğrencisi</p>
-        <hr style="border: 0.5px solid #333; margin: 20px 0;">
-        <p>Geleceğin yazılım dünyasına adım atan bir geliştirici adayıyım. Teknolojiye olan merakımı projelerime yansıtmayı seviyorum.</p>
+        <p>Bilişim Teknolojileri Öğrencisi & Geliştirici</p>
+        <div class="info-box">
+            <p><b>📍 Konum:</b> Sakarya, Türkiye</p>
+            <p><b>💻 İlgi Alanları:</b> React Native, Sistem Optimizasyonu, Donanım</p>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/urasaydin" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/urasaydin" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:urasaydin54@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </div>
 
     <div id="hakkimda" class="section">
-        <h2>Hakkımda</h2>
-        <p>Ben Uras, Sakaryada doğdum 16 yaşındayım.  <b>Borsa İstanbul Mesleki ve Teknik Anadolu Lisesi</b>'nde eğitim görüyorum.</p>
-        <p>Mobil uygulama geliştirme (React Native), donanım optimizasyonu ve web tasarım gibi alanlarla ilgileniyorum. Boş zamanlarımda sistem performansını artırmak üzerine çalışmalar yapıyorum.</p>
+        <h2>Hakkımda & Eğitim</h2>
+        <p>Borsa İstanbul Mesleki ve Teknik Anadolu Lisesi'nde 11. sınıf öğrencisiyim. Yazılım ve teknoloji süreçlerine meraklıyım.</p>
         
-        <ul class="skills-list">
-            <li class="skill-item">HTML/CSS</li>
-            <li class="skill-item">React Native</li>
-            <li class="skill-item">Donanım & OC</li>
-            <li class="skill-item">Expo</li>
-        </ul>
+        <div class="info-box">
+            <h4 style="margin:0; color:#00d2ff;">Eğitim Bilgilerim</h4>
+            <p style="margin:5px 0;">🏫 Borsa İstanbul MTAL (Bilişim Bölümü)</p>
+            <p style="margin:5px 0;">📅 2023 - Devam Ediyor</p>
+        </div>
+        
+        <div class="info-box">
+            <h4 style="margin:0; color:#00d2ff;">Deneyimler</h4>
+            <p style="margin:5px 0;">🚀 5 aydır aktif fitness ve spor disiplini.</p>
+            <p style="margin:5px 0;">🔧 PC Donanım optimizasyonu ve BIOS ayarları uzmanlığı.</p>
+        </div>
     </div>
 
     <div id="iletisim" class="section">
-        <h2>İletişim</h2>
-        <p>Her türlü iş birliği veya soru için bana ulaşabilirsin!</p>
-        <a href="mailto:urasaydin54@gmail.com" class="mail-btn">Mail Gönder: urasaydin54@gmail.com</a>
+        <h2>Benimle İletişime Geç</h2>
+        <p>Sorularınız veya iş birliği için bir mail uzağınızdayım.</p>
+        <a href="mailto:urasaydin54@gmail.com" style="background:#00d2ff; color:black; padding:15px 30px; border-radius:10px; text-decoration:none; font-weight:bold; display:inline-block; margin-top:10px;">Mail Gönder</a>
     </div>
+
+    <footer>
+        &copy; 2026 Uras Aydın. Tüm hakları saklıdır.
+    </footer>
 
     <script>
         function sayfaDegistir(id) {
@@ -155,6 +162,5 @@
             document.getElementById(id).classList.add('active');
         }
     </script>
-
 </body>
 </html>
